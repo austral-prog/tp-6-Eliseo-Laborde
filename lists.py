@@ -31,6 +31,8 @@ def is_empty(list_to_check):
 def check_lists(list_to_compare1, list_to_compare2):
     if list_to_compare1[2]==list_to_compare2[2]:
         return(True)
+    elif list_to_compare1==[] or list_to_compare2==[]:
+        return(False)
     else:
         return(False)
 
@@ -56,6 +58,8 @@ def list_of_lists(list_of_lists_to_modify):
         new_list3=list3[-2:]
     elif len(list3)==2:
         new_list3=[list3[-1]]
+    elif len(list3)==1:
+        new_list3=list3
     else:
         new_list3=[]
     list_of_lists_to_modify=[new_list1, new_list2, new_list3]
